@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assesment4</title>
+</head>
+<body>
+ <h1>   Arrays</h1>
+<h3>Q1. Find the Product?</h3>
+       <pre> Ans. const Find_Prod = (array, N) => {</pre>
+            
+            const result = array.reduce((acc, N) => acc * N ) ;
+                 
+               return result;
+             
+        
+        };
+    
+        <h3>Q2. Find the Sum?</h3>
+        <pre>Ans. const Find_Sum = (array, N) => {
+          
+          const result = array.reduce((acc, N) => acc + N);
+          
+          return result;
+          
+        
+        };</pre>
+    
+        <h3>Q3. Count Occurrences?</h3>
+        <pre>Ans. const findCount = (N, K, Arr) => {
+
+            return Arr.reduce((A, N) => (N === K ? A + 1 : A), 0);
+
+        };
+ 
+    
+        <h3>Q4. Even Odd?</h3>
+        <pre>  Ans.   const findEvenOdd = (N, Arr) => 
+        {
+            let A = [2];
+            let evensum = 0;
+            let oddsum = 0;
+            for(let i=0; i < N; i++){
+              if(Arr[i] % 2 === 0){
+                evensum += Arr[i];
+              }
+              else{
+                oddsum += Arr[i];
+              }
+            }
+            
+            A[0] = evensum;
+            A[1] = oddsum;
+            return A;
+        };</pre>
+    
+        <h3>Q5. Find whether the number is present or not?</h3>
+        <pre> Ans.const Find_Num = (array,N,M) => {
+         
+            if (array.indexOf(M) === -1){
+            return "NO";
+          }
+          else {
+            return "YES";
+          }
+        };</pre> 
+         
+    
+        <h3>Q6. Higher Age?</h3>
+        <pre>Ans. const highAge = (N, Arr) => {
+            
+            const b = Arr.filter((N) => N >= 18);
+            
+            return b;
+        };</pre> 
+    
+        <h3>Q7. Increment the Array Elements?</h3>
+        <pre>  Ans. const Inc_Arr = (array,N) => {
+
+          for(let i = 0; i < N; i++){
+            array[i] = array[i] + 1;
+            
+          }
+          
+          for (let i = 0; i < N ; i++){
+            
+            var s = array.join(" ");
+          }
+          
+          console.log(s);
+        };</pre>
+    
+        <h3>Q8. Pass or Fail?</h3>
+        <pre> Ans. const isAllPass = (N, Arr) => {
+            
+            if (Arr.every((N) => N >= 32)){
+              return "YES";
+            }
+            else {
+              return "NO";
+            }
+        };</pre>
+         
+    
+        <h3>Q9. Unique color shirt?</h3>
+        <pre>Ans. function Unique_Shirts (arr,N) {
+  
+            let unique=arr.filter((value)=>arr.indexOf(value)===arr.lastIndexOf(value));
+             return (unique.length);
+         
+          
+         }</pre>
+                  
+    
+         <h3>Q10. Min and Max?</h3>
+         <pre>Ans.  function arrayMin(arr) {
+ 
+            return arr.reduce((x, y) => ( x < y ? x : y ));
+           
+           }
+           
+           function arrayMax(arr) {
+             
+             
+              return arr.reduce((x, y) => ( x > y ? x : y ));
+           
+           
+           }</pre>
+    
+           <h3>Q11. Birthday Game?</h3>
+           <pre>Ans. function Birthday_Game(arr,D ,M) {
+ 
+            let count = 0;
+            
+             for(let i = 0; i < arr.length - 1; i++){
+               
+                   let subArray = arr.slice(i, i + M);
+                   
+                   if (subArray.length === M) {
+                     
+                      let sum = subArray.reduce((a,b) => a + b, 0);
+                      
+                      if(sum === D){
+                        
+                           count += 1;
+                       }
+                    }
+              }
+              return count;
+         
+         }</pre>
+    
+</body>
+</html>
